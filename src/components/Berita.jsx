@@ -7,7 +7,7 @@ export default function Berita() {
     const [beritas, setBeritas] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:5000/berita")
+        axios.get(`${import.meta.env.VITE_API_URL}/berita`)
             .then((res) => setBeritas(res.data))
             .catch((err) => console.log(err));
     }, []);

@@ -10,7 +10,7 @@ export default function Infografis() {
   const [dataPenduduk, setDataPenduduk] = useState(0);
 
     useEffect(() => {
-      axios.get("http://localhost:5000/penduduk_tembeng/sum")
+      axios.get(`${import.meta.env.VITE_API_URL}/sum`)
         .then((res) => setDataPenduduk(res.data))
         .catch((err) => console.log(err));
     }, []);

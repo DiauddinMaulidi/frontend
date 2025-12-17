@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const stafs = [
     {
         id: 13,
-        image: "/images/kades.jpg",
+        image: "/images/kadess.jpg",
         nama: "Drs Fahmi",
         jabatan: "Sekretaris"
     },

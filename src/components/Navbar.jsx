@@ -26,6 +26,30 @@ const navigation = [
   { name: "Produk UMKM", href: "/belanja" },
 ]
 
+const infografisMenu = [
+  {
+    name: "Penduduk",
+    href: "/infografis",
+    desc: "Statistik jumlah penduduk.",
+  },
+  {
+    name: "Pendidikan",
+    href: "/infografis/pendidikan",
+    desc: "Informasi pendidikan.",
+  },
+  {
+    name: "Kesehatan",
+    href: "/infografis/kesehatan",
+    desc: "Informasi kesehatan masyarakat.",
+  },
+  {
+    name: "Bantuan",
+    href: "/infografis/bantuan",
+    desc: "Informasi bantuan desa.",
+  },
+]
+
+
 export default function Navbar() {
   const [isScroll, setIsScroll] = useState(false)
   const location = useLocation()
@@ -95,64 +119,29 @@ export default function Navbar() {
                 {navigation.map((item) =>
                   item.dropdown ? (
                     // --- INFROGRAFIS JADI DROPDOWN SHADCN ---
-                    <NavigationMenu key={item.name}>
-                      <NavigationMenuList>
-                        <NavigationMenuItem>
-                          <NavigationMenuTrigger className="font-bold text-base text-gray-300 bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white data-highlighted:bg-transparent shadow-none active:text-white focus:text-white">
-                            {item.name}
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent className={`${isScroll ? "bg-blue-900 text-white" : "bg-blue-950/70 text-white backdrop-blur"} rounded-md`}>
-                            <ul className="grid w-[300px] gap-4 p-4">
-                              <li>
-                                <NavigationMenuLink asChild>
-                                  <Link to="/infografis">
-                                    <div className="font-medium">
-                                      Penduduk
-                                    </div>
-                                    <div className="text-muted-foreground">
-                                      Statistik jumlah penduduk.
-                                    </div>
-                                  </Link>
-                                </NavigationMenuLink>
+                    <NavigationMenuContent
+                      className={`${
+                        isScroll
+                          ? "bg-blue-900 text-white"
+                          : "bg-blue-950/70 backdrop-blur text-white"
+                      } rounded-md`}
+                    >
+                      <ul className="grid w-[320px] gap-4 p-4">
+                        {infografisMenu.map((sub) => (
+                          <li key={sub.name}>
+                            <NavigationMenuLink asChild>
+                              <Link to={sub.href}>
+                                <div className="font-medium">{sub.name}</div>
+                                <div className="text-muted-foreground text-sm">
+                                  {sub.desc}
+                                </div>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
 
-                                <NavigationMenuLink asChild>
-                                  <Link to="/infografis/pendidikan">
-                                    <div className="font-medium">
-                                      Pendidikan
-                                    </div>
-                                    <div className="text-muted-foreground">
-                                      Informasi Pendidikan
-                                    </div>
-                                  </Link>
-                                </NavigationMenuLink>
-
-                                <NavigationMenuLink asChild>
-                                  <Link to="/infografis/kesehatan">
-                                    <div className="font-medium">
-                                      Kesehatan
-                                    </div>
-                                    <div className="text-muted-foreground">
-                                      Informasi kesehatan masyarakat.
-                                    </div>
-                                  </Link>
-                                </NavigationMenuLink>
-
-                                <NavigationMenuLink asChild>
-                                  <Link to="/infografis/bantuan">
-                                    <div className="font-medium">
-                                      Bantuan
-                                    </div>
-                                    <div className="text-muted-foreground">
-                                      Informasi bantuan di desa.
-                                    </div>
-                                  </Link>
-                                </NavigationMenuLink>
-                              </li>
-                            </ul>
-                          </NavigationMenuContent>
-                        </NavigationMenuItem>
-                      </NavigationMenuList>
-                    </NavigationMenu>
                   ) : (
                     // --- MENU BIASA ---
                     <NavLink
@@ -182,20 +171,20 @@ export default function Navbar() {
           {navigation.map((item) =>
             item.dropdown ? (
               <div key={item.name} className="bg-blue-900 rounded-md p-2">
-                {/* Submenu mobile */}
                 <p className="text-white font-bold">{item.name}</p>
                 <div className="mt-2 ml-4 space-y-2">
-                  <Link className="block text-gray-200" to="/infografis/peta">
-                    Peta Wilayah
-                  </Link>
-                  <Link className="block text-gray-200" to="/infografis/penduduk">
-                    Data Penduduk
-                  </Link>
-                  <Link className="block text-gray-200" to="/infografis/kesehatan">
-                    Kesehatan
-                  </Link>
+                  {infografisMenu.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      to={sub.href}
+                      className="block text-gray-200 hover:text-white"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
+
             ) : (
               <NavLink
                 key={item.name}

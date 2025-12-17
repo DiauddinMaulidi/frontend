@@ -42,7 +42,7 @@ export default function GaleryAll() {
                 onInit={onInit}
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
-                elementClassNames="grid grid-cols-[repeat(auto-fill,minmax(300px, 1fr))] gap-4 mx-10 md:mx-0 sm:grid-cols-[repeat(auto-fill,minmax(300px,1fr))]"
+                elementClassNames="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 mx-4 md:mx-0"
             >
                 {dataGallery.map((item) => (
                     <a href={item.images}>

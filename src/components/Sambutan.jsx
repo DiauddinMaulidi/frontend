@@ -3,7 +3,7 @@ export default function Home() {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 mb-10 items-center gap-8">
         <div className="mx-auto flex justify-center sm:justify-center items-center sm:ml-10 sm:mr-20">
-          <img src="public/images/lotim.png" alt="" className="mt-30 sm:mr-10" />
+          <img src="/images/lotim.png" alt="" className="mt-30 sm:mr-10" />
         </div>
         <div className="mt-30 ml-5 mr-5 text-center sm:text-start sm:-ml-20 sm:mr-20">
           <h1 className="text-2xl font-bold text-blue-700">

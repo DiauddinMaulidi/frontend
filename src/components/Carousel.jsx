@@ -17,7 +17,7 @@ export default function HeroCarousel() {
 
   const slides = [
     {
-      image: "public/images/Desa.Webp",
+      image: "public/images/Desa.jpg",
       title: "Selamat Datang\nWebsite Resmi Desa Tembeng Putik",
       subtitle: "Kecamatan Wanasaba",
     },

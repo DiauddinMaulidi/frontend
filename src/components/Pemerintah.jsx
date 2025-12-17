@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 
 const stafs = [
     {
+        id: 13,
+        image: "/images/kades.jpg",
+        nama: "Drs Fahmi",
+        jabatan: "Sekretaris"
+    },
+    {
         id: 11,
         image: "/images/kesebelas.jpg",
         nama: "Samsurijal Jami, S.Pd",

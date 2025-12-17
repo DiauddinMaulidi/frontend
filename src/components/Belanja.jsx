@@ -40,7 +40,7 @@ export default function Belanja() {
               className="max-w-sm"
               renderImage={() => (
                 <img
-                  src={`http://localhost:5000/assets/${belanja.images[0]}`}
+                  src={`${import.meta.env.VITE_API_URL}/assets/${belanja.images[0]}`}
                   alt={belanja.judul}
                   className="h-56 w-full object-cover rounded-t-lg"
                 />

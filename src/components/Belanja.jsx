@@ -9,7 +9,7 @@ export default function Belanja() {
   const loadData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/penduduk_tembeng/umkm`
+          `${import.meta.env.VITE_API_URL}/penduduk_tembeng/umkm`
         );
         setDataUmkm(res.data);
       } catch (err) {

@@ -16,7 +16,7 @@ export default function GaleryAll() {
     const [dataGallery, setDataGallery] = useState([])
 
         const loadGallery = async () => {
-            const res = await axios.get("http://localhost:5000/penduduk_tembeng/gallery")
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/penduduk_tembeng/gallery`)
             setDataGallery(res.data)
         }
 

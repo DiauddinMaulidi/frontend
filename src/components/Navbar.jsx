@@ -43,11 +43,6 @@ const infografisMenu = [
     href: "/infografis/kesehatan",
     desc: "Informasi kesehatan masyarakat.",
   },
-  {
-    name: "Bantuan",
-    href: "/infografis/bantuan",
-    desc: "Informasi bantuan desa.",
-  },
 ]
 
 export default function Navbar() {

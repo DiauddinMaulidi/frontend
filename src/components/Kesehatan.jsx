@@ -7,7 +7,7 @@ export default function Kesehatan() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const loadData = async () => {
-    const res = await axios.get("http://localhost:5000/kesehatan");
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/kesehatan`);
     setDataKesehatan(res.data);
   };
 

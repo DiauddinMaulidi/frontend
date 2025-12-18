@@ -18,7 +18,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h2 className="text-lg font-bold mb-2">Hubungi Kami</h2>
-          <p className="text-sm mb-1">📞 0813-3070-3717 (Operator Desa)</p>
+          <p className="text-sm mb-1">📞 0877-4334-6203 (Operator Desa)</p>
         </div>
 
         {/* Important Numbers */}

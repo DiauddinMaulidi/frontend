@@ -28,7 +28,7 @@ export default function Data() {
       </h2>
 
       {/* ================= DESKTOP ================= */}
-      <div className="hidden md:block bg-white p-6 rounded-xl shadow-md w-full h-[500px]">
+      <div className="block md:hidden bg-white p-6 rounded-xl shadow-md w-full h-[500px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
@@ -51,7 +51,7 @@ export default function Data() {
       </div>
 
       {/* ================= MOBILE ================= */}
-      <div className="block md:hidden bg-white p-4 rounded-xl shadow-md w-full h-[520px]">
+      <div className="hidden md:block bg-white p-4 rounded-xl shadow-md w-full h-[520px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" opacity={0.3} />

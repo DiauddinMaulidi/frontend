@@ -51,7 +51,7 @@ export default function Data() {
       </div>
 
       {/* ================= MOBILE ================= */}
-      <div className="block md:hidden bg-white p-4 rounded-xl shadow-md w-full h-[420px]">
+      <div className="block md:hidden bg-white p-4 rounded-xl shadow-md w-full h-[520px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" opacity={0.3} />

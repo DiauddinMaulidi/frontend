@@ -43,7 +43,7 @@ export default function Gallery() {
                 onInit={onInit}
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
-                elementClassNames="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4 mx-10 md:mx-24 sm:grid-cols-[repeat(auto-fill,minmax(300px, 1fr))]"
+                elementClassNames="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-center gap-4 mx-10 md:mx-24 sm:grid-cols-[repeat(auto-fill,minmax(300px, 1fr))]"
             >
                 {dataGallery.slice(0, 6).map((item) => (
                     <a href={item.images}>

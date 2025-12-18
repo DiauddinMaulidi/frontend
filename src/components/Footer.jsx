@@ -9,7 +9,6 @@ export default function Footer() {
         <div>
           <h2 className="text-base font-bold mb-2">Pemerintah Desa Tembeng Putik</h2>
           <p className="text-sm leading-relaxed">
-            Jalan Langaseng Dusun Empang RT. 001/003,<br />
             Desa Tembeng Putik, Kec. Wanasaba,<br />
             Kabupaten Lombok Timur,<br />
             Provinsi Nusa Tenggara Barat 75385

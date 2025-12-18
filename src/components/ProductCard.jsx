@@ -7,12 +7,12 @@ export default function DetailBelanja() {
   const [dataUmkm, setDataUmkm] = useState([]);
   const [activeImage, setActiveImage] = useState("");
 
-  const BASE_IMG = "http://localhost:5000/assets/";
+  const BASE_IMG = `${import.meta.env.VITE_API_URL}/assets/`;
 
     const loadData = async () => {
         try {
           const res = await axios.get(
-            "http://localhost:5000/penduduk_tembeng/umkm"
+            `${import.meta.env.VITE_API_URL}/penduduk_tembeng/umkm`
           );
           setDataUmkm(res.data);
         } catch (err) {

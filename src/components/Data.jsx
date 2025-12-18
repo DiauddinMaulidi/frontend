@@ -6,7 +6,7 @@ export default function Data() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/penduduk_tembeng/perPendidikan")
+    axios.get(`${import.meta.env.VITE_API_URL}/penduduk_tembeng/perPendidikan`)
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
